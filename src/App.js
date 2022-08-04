@@ -2,6 +2,48 @@
 function App() {
   return (
     <div className="wrapper clear">
+      <div className="overlay">
+        <div className="drawer">
+          <h2 className="mb-30">Корзина <img className="remove-btn" src="/img/btn-remove.svg" alt="Remove" /></h2>
+
+          <div className="items">
+            <div className="cart-item d-flex align-center mb-20">
+              
+              <div style={{backgroundImage: 'url(/img/sneakers/1.jpg)'}} className="cartItemImg"></div>
+              <div className="mr-20 flex">
+                <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
+                <b>12 999 руб.</b>
+              </div>
+              <img className="remove-btn" src="/img/btn-remove.svg" alt="Remove" />
+            </div>
+            <div className="cart-item d-flex align-center mb-20">
+              
+              <div style={{backgroundImage: 'url(/img/sneakers/1.jpg)'}} className="cartItemImg"></div>
+              <div className="mr-20 flex">
+                <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
+                <b>12 999 руб.</b>
+              </div>
+              <img className="remove-btn" src="/img/btn-remove.svg" alt="Remove" />
+            </div>
+          </div>
+          <div className="cartTotalBlock">
+            <ul>
+              <li className="d-flex">
+                <span>Итого: </span>
+                <div></div>
+                <b>21 498 руб. </b>
+              </li>
+              <li className="d-flex">
+                <span>Налог 5%: </span>
+                <div></div>
+                <b>1074 руб.</b>
+              </li>
+            </ul>
+            <button className="greenBtn">Оформить заказ <img src="/img/arrow-right.svg" alt="arrow" /></button>
+          </div>
+          
+        </div>
+      </div>
       <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
           <img width={40} height={40} src="/img/logo.png" alt="true"/>
@@ -21,9 +63,18 @@ function App() {
         </ul>
       </header>
       <div className="content p-40">
-        <h1 className="mb-40">Все кроссовки</h1>
+        <div className="d-flex align-center justify-between mb-40">
+          <h1>Все кроссовки</h1>
+          <div className="search-block d-flex">
+            <img src="/img/search.svg" alt="Search" />
+            <input placeholder="Поиск..." />
+          </div>
+        </div>
         <div className="d-flex">
         <div className="card">
+          <div className="favorite">
+            <img src="/img/unliked.svg" alt="Unliked" />
+          </div>
           <img width={133}  src="/img/sneakers/1.jpg" alt="sneakers" />
           <h5>
             Мужские Кроссовки Nike Blazer Mid Suede
